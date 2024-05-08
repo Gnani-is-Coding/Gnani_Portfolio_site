@@ -1,10 +1,15 @@
-
+import  { ThemeProvider} from "styled-components"  //Themeprovider is a theme context 
+import {darkTheme} from "./utils/themes"
+import Navbar from "./components/Navbar/Navbar";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div className="">
-     <h1>hi</h1>
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <BrowserRouter>
+        <Navbar/>
+     </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
