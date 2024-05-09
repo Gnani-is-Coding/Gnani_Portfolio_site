@@ -141,11 +141,11 @@ export const Navbar = () => {
       <NavbarLogo to="/"><TbSquareRoundedLetterG/></NavbarLogo>
 
       <MobileIcon onClick={() => setIsOpen(!isOpen)}>
-        <MenuRounded style={{color: "inherit"}} />
+        <MenuRounded style={{color: "inherit", cursor: "pointer"}} />
       </MobileIcon>
 
       <NavItem>
-        <NavLink href="#About">About</NavLink>    {/* #About is for routing to that section */}
+        <NavLink  href="#About">About</NavLink>    {/* #About is for routing to that section */}
         <NavLink href="#Skils">Skills</NavLink>
         <NavLink href="#Experience">Experience</NavLink>
         <NavLink href="#Projects">Projects</NavLink>
@@ -154,12 +154,12 @@ export const Navbar = () => {
 
       {
         isOpen && (<MobileMenu isOpen={isOpen}>
-           <NavLink href="#About">About</NavLink>
-           <NavLink href="#Skills">Skills</NavLink>
-           <NavLink href="#Experience">Experience</NavLink>
-           <NavLink href="#Projects">Projects</NavLink>
-           <NavLink href="#Education">Education</NavLink>
-           <GithubButton href={Bio.github} 
+           <NavLink onClick={() => setIsOpen(!isOpen)} href="#About">About</NavLink>
+           <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">Skills</NavLink>
+           <NavLink onClick={() => setIsOpen(!isOpen)} href="#Experience">Experience</NavLink>
+           <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">Projects</NavLink>
+           <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">Education</NavLink>
+           <GithubButton href={Bio.github}
            style={{
             background : theme.primary,
             color: theme.text_primary,
