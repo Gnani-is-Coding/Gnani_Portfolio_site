@@ -19,7 +19,8 @@ function Stars(props) {
     const ref  = useRef()
     const [sphere] = useState( () => 
         random.inSphere(new Float32Array(5000), { radius: 1.2})
-); {/**For representing spheres in random manner */}
+); 
+//**For representing spheres in random manner *
 
  useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;  
