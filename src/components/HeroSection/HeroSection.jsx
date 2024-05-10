@@ -4,6 +4,9 @@ import { Bio } from '../../data/constants'
 import Typewriter  from "typewriter-effect"
 import lord from "../../images/lord.webp"
 import HeroBgAnimation from "../HeroBgAnimation"
+import {Tilt} from "react-tilt"
+import {motion} from "framer-motion"
+import {headContentAnimation, headTextAnimation} from "../../utils/motion"
 
 const HeroContainer =  styled.div`
 display: flex;
@@ -202,28 +205,41 @@ function HeroSection() {
                 <HeroBgAnimation></HeroBgAnimation>
             </HeroBg>
 
+            <motion.div {...headContentAnimation}>
             <HeroInnerContainer>
                 <HeroLeftContainer>
-                    <Title>HI, I am <br/> {Bio.name}</Title>
-                    <TextLoop>I am a 
-                        <Span>
-                            <Typewriter 
-                            options = {{
-                                strings: Bio.roles,
-                                loop: true,
-                                autoStart : true,
-                            }}
-                            />
-                        </Span>
-                    </TextLoop>
-                    <SubTitle>{Bio.description}</SubTitle>
+                    <motion.div {...headTextAnimation}>
+                        <Title>Hi, I am <br/> {Bio.name}</Title>
+                        <TextLoop>I am a 
+                            <Span>
+                                <Typewriter 
+                                options = {{
+                                    strings: Bio.roles,
+                                    loop: true,
+                                    autoStart : true,
+                                }}
+                                />
+                            </Span>
+                        </TextLoop>
+                    </motion.div>
+
+                    <motion.div {...headContentAnimation}>
+                        <SubTitle>{Bio.description}</SubTitle>
+                    </motion.div>
+
                     <ResumeButton>Check Resume </ResumeButton>
                 </HeroLeftContainer>
 
                 <HeroRightContainer>
-                    <Img src={lord} alt="Gnani" />
+                <motion.div {...headContentAnimation}>
+                    <Tilt>
+                        <Img src={lord} alt="Gnani" />
+                    </Tilt>
+                </motion.div>
                 </HeroRightContainer>
             </HeroInnerContainer>
+            </motion.div>
+            
         </HeroContainer>
     </div>
   )
