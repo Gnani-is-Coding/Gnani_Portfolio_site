@@ -3,7 +3,7 @@ import {darkTheme} from "./utils/themes"
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import HeroSection from "./components/HeroSection/HeroSection"; 
-
+import SkillSection from "./components/SkillSection/index.jsx"
 
 
 const Body = styled.div`
@@ -23,6 +23,7 @@ function App() {
         {/* <hr style={{'color': '#ffffff' }} /> */}
         <Body>
           <HeroSection/>
+          <SkillSection/>
         </Body>
      </BrowserRouter>
     </ThemeProvider>
