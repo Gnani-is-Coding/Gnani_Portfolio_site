@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import HeroSection from "./components/HeroSection/HeroSection"; 
 import SkillSection from "./components/SkillSection/index.jsx"
 import Experience from "./components/Experience/Experience.jsx";
+import Education from "./components/EducationSection/Education.jsx";
 
 
 const Body = styled.div`
@@ -26,6 +27,7 @@ function App() {
           <HeroSection/>
           <SkillSection/>
           <Experience/>
+          <Education/>
         </Body>
      </BrowserRouter>
     </ThemeProvider>
