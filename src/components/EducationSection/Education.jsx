@@ -4,6 +4,7 @@ import { education } from '../../data/constants'
 import EducationCard from './EducationCard'
 import { VerticalTimeline } from 'react-vertical-timeline-component'
 import "react-vertical-timeline-component/style.min.css";
+import EarthCanvas from '../Canvas/Earth3DModel'
 
 
 const Container = styled.div`
@@ -63,6 +64,7 @@ function Education() {
             <EducationCard key={`education-${index}`} education={education} />
           ))}
         </VerticalTimeline>
+        <EarthCanvas/>
         </Wrapper>
     </Container>
   )
