@@ -6,57 +6,57 @@ import HeroSection from "./components/HeroSection/HeroSection";
 import SkillSection from "./components/SkillSection/index.jsx"
 import Experience from "./components/Experience/Experience.jsx";
 import Education from "./components/EducationSection/Education.jsx";
-import StyledStarCanvas from "./components/Canvas/stars.jsx";
+import StartCanvas from "./components/Canvas/stars.jsx";
 import Projects from "./components/ProjectsSection/Projects.jsx";
 import Contact from "./components/ContactSection/Contact.jsx";
+import Footer from "./components/FooterSection/Footer.jsx";
 
 
 const Body = styled.div`
-background-color: ${({theme}) => theme.bg};
-width: 100%;
-height: 90vh;
-overflow-x: hidden;
-position: relative; 
-` 
+  background-color: ${({ theme }) => theme.bg};
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+`;
+
 const Wrapper = styled.div`
-padding-bottom: 100px;
-background: linear-gradient(
-  38.73deg,
-  rgba(204, 0, 187, 0.15) 0%,
-  rgba(201, 32, 184, 0) 50%
-),
-linear-gradient(
-  141.27deg,
-  rgba(0, 70, 209, 0) 50%,
-  rgba(0, 70, 209, 0.15) 100%
-);
-width: 100%;
-clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
-`
+  padding-bottom: 100px;
+  background: linear-gradient(
+      38.73deg,
+      rgba(204, 0, 187, 0.15) 0%,
+      rgba(201, 32, 184, 0) 50%
+    ),
+    linear-gradient(
+      141.27deg,
+      rgba(0, 70, 209, 0) 50%,
+      rgba(0, 70, 209, 0.15) 100%
+    );
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
+`;
 
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <BrowserRouter>
-        <Navbar/>
-        {/* <hr style={{'color': '#ffffff' }} /> */}
+        <Navbar />
         <Body>
-          <StyledStarCanvas/>
+          <StartCanvas />
           <div>
-            <HeroSection/>
+            <HeroSection />
             <Wrapper>
-              <SkillSection/>
-              <Experience/>
+              <SkillSection />
+              <Experience />
             </Wrapper>
-
-            <Projects/>
+            <Projects />
             <Wrapper>
-              <Education/>
-              <Contact/>
+              <Education />
+              <Contact />
             </Wrapper>
+            <Footer />
           </div>
         </Body>
-     </BrowserRouter>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
