@@ -6,10 +6,10 @@ import HeroSection from "./components/HeroSection/HeroSection";
 import SkillSection from "./components/SkillSection/index.jsx"
 import Experience from "./components/Experience/Experience.jsx";
 import Education from "./components/EducationSection/Education.jsx";
-import StartCanvas from "./components/Canvas/stars.jsx";
 import Projects from "./components/ProjectsSection/Projects.jsx";
 import Contact from "./components/ContactSection/Contact.jsx";
 import Footer from "./components/FooterSection/Footer.jsx";
+import StyledStarCanvas from "./components/Canvas/stars.jsx";
 
 
 const Body = styled.div`
@@ -41,7 +41,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Body>
-          <StartCanvas />
+          <StyledStarCanvas/>
           <div>
             <HeroSection />
             <Wrapper>
