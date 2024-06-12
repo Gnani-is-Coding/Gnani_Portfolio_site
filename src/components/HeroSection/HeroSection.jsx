@@ -7,7 +7,7 @@ import HeroBgAnimation from "../HeroBgAnimation"
 import {Tilt} from "react-tilt"
 import {motion} from "framer-motion"
 import {headContentAnimation, headTextAnimation} from "../../utils/motion"
-import StarCanvas from "../Canvas/stars"
+import StyledStarCanvas from '../Canvas/stars'
 
 const HeroContainer =  styled.div`
 display: flex;
@@ -203,7 +203,7 @@ function HeroSection() {
     <div id="About">
         <HeroContainer>
             <HeroBg>  {/*bg matrix animation*/}
-                <StarCanvas></StarCanvas>
+                <StyledStarCanvas/>
                 <HeroBgAnimation></HeroBgAnimation>
             </HeroBg>
 
@@ -229,7 +229,7 @@ function HeroSection() {
                         <SubTitle>{Bio.description}</SubTitle>
                     </motion.div>
 
-                    <ResumeButton>Check Resume </ResumeButton>
+                    <ResumeButton href="https://drive.google.com/file/d/1cJFsQTCN0kAp2D0-iBIrlvrnbR8gy3Wc/view" target="_blank">Check Resume </ResumeButton>
                 </HeroLeftContainer>
 
                 <HeroRightContainer>

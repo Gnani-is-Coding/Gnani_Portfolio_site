@@ -61,6 +61,7 @@ box-shadow:rgba(23, 92, 230, 0.15) 0px 4 px 24px;
 border-radius: 16px;
 padding: 18px 36px;
 cursor: pointer;
+min-height: 300px;
 
 @media screen and (max-width: 768px) {
     max-width: 400px;
