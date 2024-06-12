@@ -229,7 +229,7 @@ function HeroSection() {
                         <SubTitle>{Bio.description}</SubTitle>
                     </motion.div>
 
-                    <ResumeButton>Check Resume </ResumeButton>
+                    <ResumeButton href="https://drive.google.com/file/d/1cJFsQTCN0kAp2D0-iBIrlvrnbR8gy3Wc/view" target="_blank">Check Resume </ResumeButton>
                 </HeroLeftContainer>
 
                 <HeroRightContainer>

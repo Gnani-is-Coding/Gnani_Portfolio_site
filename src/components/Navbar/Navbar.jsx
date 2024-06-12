@@ -138,7 +138,7 @@ export const Navbar = () => {
   return (
     <Nav>
     <NavbarContainer>
-      <NavbarLogo to="/"><TbSquareRoundedLetterG/></NavbarLogo>
+      <NavbarLogo to="/"><TbSquareRoundedLetterG style={{marginRight: "-17px"}}/> <TbSquareRoundedLetterG/></NavbarLogo>
 
       <MobileIcon onClick={() => setIsOpen(!isOpen)}>
         <MenuRounded style={{color: "inherit", cursor: "pointer"}} />
