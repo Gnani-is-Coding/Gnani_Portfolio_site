@@ -25,14 +25,14 @@ const Wrapper = styled.div`
   }
 `;
 const Title = styled.div`
-  font-size: 52px;
+  font-size: 36px;
   text-align: center;
   font-weight: 600;
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
     margin-top: 12px;
-    font-size: 32px;
+    font-size: 30px;
   }
 `;
 const Desc = styled.div`

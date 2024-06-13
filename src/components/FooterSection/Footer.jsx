@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import {
-  FacebookRounded,
   Instagram,
   LinkedIn,
   Twitter,
@@ -94,9 +93,7 @@ const Footer = () => {
           <NavLink href="#Education">Education</NavLink>
         </Nav>
         <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.facebook} target="display">
-            <FacebookRounded />
-          </SocialMediaIcon>
+          {/**#TODO change cursor as the social media icons*/}
           <SocialMediaIcon href={Bio.twitter} target="display">
             <Twitter />
           </SocialMediaIcon>
@@ -107,7 +104,7 @@ const Footer = () => {
             <Instagram />
           </SocialMediaIcon>
         </SocialMediaIcons>
-        <Copyright>&copy; 2024 Gnani. All rights reserved.</Copyright>
+        <Copyright>&copy; 2024 Gnani. All rights reserved. +916309711722</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );

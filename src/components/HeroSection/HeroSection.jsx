@@ -2,10 +2,9 @@ import React from 'react'
 import styled from "styled-components"
 import { Bio } from '../../data/constants'
 import Typewriter  from "typewriter-effect"
-import lord from "../../images/lord.webp"
 import profile_pic from '../../images/Profile_Picture.jpg'
 import HeroBgAnimation from "../HeroBgAnimation"
-import {Tilt} from "react-tilt"
+// import {Tilt} from "react-tilt"
 import {motion} from "framer-motion"
 import {headContentAnimation, headTextAnimation} from "../../utils/motion"
 import StyledStarCanvas from '../Canvas/stars'
@@ -74,13 +73,13 @@ justify-content: end;
 `
 const Title = styled.div`
 font-weight: 700;
-font-size: 50px;
+font-size: 32px;
 color: ${({theme}) => theme.text_primary};
 line-height: 68px;
 
 @media screen and (max-width: 960px){
     text-align: center;
-    font-size:  40px;
+    font-size:  30px;
     line-height: 48px;
     margin-bottom: 8px;
 }
@@ -109,16 +108,17 @@ color: ${({theme}) => theme.primary};
 cursor: pointer;
 `
 const SubTitle = styled.div`
-font-size: 20px;
+font-size: 16px;
 line-height: 32px;
 margin-bottom: 42px;
 color: ${({theme}) => theme.text_primary + 95} ; //here 95 is the opacity
 
 @media screen and (max-width: 960px){
     justify-content: center;
-    font-size:  16px;
+    font-size:  14px;
     line-height: 32px;
-    
+    max-width:95%;
+    text-align: center;
 }
 `
 const ResumeButton = styled.a`
@@ -166,19 +166,19 @@ cursor: pointer;
 }
 color: white;
 `
-const Img = styled.img`
-border-radius: 50%;
-width: 100%;
-height: 100%; 
-max-width: 400px;
-max-height: 400px;
-border: 2px solid ${({theme}) => theme.primary};
+// const Img = styled.img`
+// border-radius: 50%;
+// width: 100%;
+// height: 100%; 
+// max-width: 400px;
+// max-height: 400px;
+// border: 2px solid ${({theme}) => theme.primary};
 
-@media (max-width: 640px){
-    max-width:280px;
-    max-height:280px;   
-}
-`
+// @media (max-width: 640px){
+//     max-width:280px;
+//     max-height:280px;   
+// }
+// `
 const HeroBg = styled.div`
 position: absolute;
 display: flex;
