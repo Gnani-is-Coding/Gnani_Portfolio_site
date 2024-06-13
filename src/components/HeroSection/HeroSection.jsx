@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Bio } from '../../data/constants'
 import Typewriter  from "typewriter-effect"
 import lord from "../../images/lord.webp"
+import profile_pic from '../../images/Profile_Picture.jpg'
 import HeroBgAnimation from "../HeroBgAnimation"
 import {Tilt} from "react-tilt"
 import {motion} from "framer-motion"
@@ -233,14 +234,76 @@ function HeroSection() {
                 </HeroLeftContainer>
 
                 <HeroRightContainer>
-                <motion.div {...headContentAnimation}>
+
+                
+                <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"> 
+                <defs>                         
+                <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">                            
+                <stop id="stop1" stop-color="rgba(248, 117, 55, 1)" offset="0%">
+                </stop>                            
+                <stop id="stop2" stop-color="rgba(251, 168, 31, 1)" offset="100%"></stop>                        
+                </linearGradient>                    
+                </defs>  
+                <mask mask-type="alpha" id ="mask1">
+                 <path fill="url(#sw-gradient)" d="M22.9,-28.2C28,-22.9,29.5,-14.2,30,-6.1C30.4,2,29.9,9.5,27,16.5C24.1,23.5,18.7,30.1,11.6,33.2C4.5,36.4,
+                    -4.3,36.2,-12,33.2C-19.7,30.3,-26.4,24.7,-30,17.7C-33.7,10.7,-34.2,2.3,-33.4,-6.5C-32.6,-15.3,-30.4,-24.4,-24.6,-29.5C-18.8,-34.7,-9.4,-35.7
+                    ,-0.3,-35.4C8.9,-35.1,17.7,-33.4,22.9,-28.2Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
+                style={{"transition": "all 0.3s ease 0s"}}>
+                </path>
+                 </mask>  
+                    <g mask="url(#mask1)">            
+                    <path fill="url(#sw-gradient)" d="M22.9,-28.2C28,-22.9,29.5,-14.2,30,-6.1C30.4,2,29.9,9.5,27,16.5C24.1,23.5,18.7,30.1,11.6,33.2C4.5,36.4,
+                        -4.3,36.2,-12,33.2C-19.7,30.3,-26.4,24.7,-30,17.7C-33.7,10.7,-34.2,2.3,-33.4,-6.5C-32.6,-15.3,-30.4,-24.4,-24.6,-29.5C-18.8,-34.7,-9.4,-35.7
+                        ,-0.3,-35.4C8.9,-35.1,17.7,-33.4,22.9,-28.2Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0"
+                    style={{"transition": "all 0.3s ease 0s"}}>
+                    </path>  
+                    <image href={profile_pic} style={{width: '80px','height':'100px'}} alt="profile pic" x='9' y='10'/>  
+                    </g>          
+                </svg>
+                
+
+            
+
+                {/* <motion.div {...headContentAnimation}>
                     <Tilt>
-                        <Img src={lord} alt="Gnani" />
+                        <Img src={profile_pic} alt="Gnani" />
+                        
                     </Tilt>
-                </motion.div>
+                    
+                </motion.div> */}
                 </HeroRightContainer>
             </HeroInnerContainer>
             </motion.div>
+                 
+            {/* <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">                    
+            <defs>                         
+            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">                            
+                <stop id="stop1" stop-color="rgba(248, 117, 55, 1)" offset="0%"></stop>                            
+                <stop id="stop2" stop-color="rgba(251, 168, 31, 1)" offset="100%"></stop>                        
+                </linearGradient>                    
+                </defs>  
+                <mask mask-type="alpha" id ="mask1">
+                <path fill="url(#sw-gradient)" d="M19.9,-30.6C27,-30.4,34.6,-27.4,36.2,-21.9C37.7,-16.3,33.1,-8.1,32.4,-0.4C31.6,7.3,
+                34.8,14.6,31.9,17.8C28.9,21,20,20.1,13.7,21.8C7.4,23.5,3.7,27.9,-2,31.4C-7.8,34.9,-15.5,37.7,-20.9,35.4C-26.2,33.1,-29.1
+                ,25.8,-32.5,19.1C-36,12.3,-39.9,6.2,-39,0.5C-38,-5.1,-32.2,-10.2,-28.9,-17.1C-25.6,-24,-24.8,-32.8,-20.4,-34.5C-16,-36.2,-8,
+                -30.8,-0.8,-29.4C6.4,-28.1,12.9,-30.7,19.9,-30.6Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" 
+                style={{"transition": "all 0.3s ease 0s;"}} stroke="url(#sw-gradient)"></path>
+                </mask>  
+
+                <g mask="url(#mask1)">             
+                <path fill="url(#sw-gradient)" d="M19.9,-30.6C27,-30.4,34.6,-27.4,36.2,-21.9C37.7,-16.3,33.1,-8.1,32.4,-0.4C31.6,7.3,
+                34.8,14.6,31.9,17.8C28.9,21,20,20.1,13.7,21.8C7.4,23.5,3.7,27.9,-2,31.4C-7.8,34.9,-15.5,37.7,-20.9,35.4C-26.2,33.1,-29.1
+                ,25.8,-32.5,19.1C-36,12.3,-39.9,6.2,-39,0.5C-38,-5.1,-32.2,-10.2,-28.9,-17.1C-25.6,-24,-24.8,-32.8,-20.4,-34.5C-16,-36.2,-8,
+                -30.8,-0.8,-29.4C6.4,-28.1,12.9,-30.7,19.9,-30.6Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" 
+                style={{"transition": "all 0.3s ease 0s;"}} stroke="url(#sw-gradient)"></path> 
+                <image href={profile_pic} style={{width: '80px'}} alt="profile pic" x='16' y='18'/>
+                </g>             
+            </svg> */}
+                 
+
+                
+
+                
             
         </HeroContainer>
     </div>
