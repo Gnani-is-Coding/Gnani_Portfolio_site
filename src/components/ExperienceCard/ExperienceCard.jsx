@@ -71,6 +71,10 @@ const Span = styled.div`
 `;
 
 const Skill = styled.div`
+  border: 1px solid ${({ theme }) => theme.text_primary + 99};
+  padding: 10px;
+  border-radius: 8px;
+  margin: 5px;
   font-size: 15px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary + 99};
@@ -127,8 +131,8 @@ function ExperienceCard({experience}) {
                         <Skills>
                             <b>Skill</b>
                             <ItemWrapper>
-                            {experience?.skill?.map((skill,index) => (
-                              <Skill>• {skill}</Skill>
+                            {experience?.skills?.map((skill,index) => (
+                              <Skill>• {skill} </Skill>
                             ))}
                             </ItemWrapper>
                         </Skills>
