@@ -1,5 +1,5 @@
 import styled, { ThemeProvider} from "styled-components"  //Themeprovider is a theme context 
-import {darkTheme} from "./utils/themes"
+import {darkTheme,lightTheme} from "./utils/themes"
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import HeroSection from "./components/HeroSection/HeroSection"; 
@@ -10,6 +10,7 @@ import Projects from "./components/ProjectsSection/Projects.jsx";
 import Contact from "./components/ContactSection/Contact.jsx";
 import Footer from "./components/FooterSection/Footer.jsx";
 import StyledStarCanvas from "./components/Canvas/stars.jsx";
+import { ContextProvider, usePortfolio } from "./Context..js";
 
 
 const Body = styled.div`
@@ -36,8 +37,11 @@ const Wrapper = styled.div`
 `;
 
 function App() {
+  const {isDarkTheme} = usePortfolio()
+  console.log(isDarkTheme)
+
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={ isDarkTheme ? darkTheme:lightTheme} >
       <BrowserRouter>
         <Navbar />
         <Body>
