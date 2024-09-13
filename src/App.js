@@ -10,7 +10,7 @@ import Projects from "./components/ProjectsSection/Projects.jsx";
 import Contact from "./components/ContactSection/Contact.jsx";
 import Footer from "./components/FooterSection/Footer.jsx";
 import StyledStarCanvas from "./components/Canvas/stars.jsx";
-import { ContextProvider, usePortfolio } from "./Context..js";
+import { usePortfolio } from "./Context..js";
 
 
 const Body = styled.div`
@@ -38,7 +38,6 @@ const Wrapper = styled.div`
 
 function App() {
   const {isDarkTheme} = usePortfolio()
-  console.log(isDarkTheme)
 
   return (
     <ThemeProvider theme={ isDarkTheme ? darkTheme:lightTheme} >

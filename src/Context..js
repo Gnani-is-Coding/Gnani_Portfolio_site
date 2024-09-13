@@ -3,14 +3,10 @@ import { createContext, useContext, useState } from "react";
 const ContextObj = createContext({})
 
 export function ContextProvider({children}) {
-    const [isDarkTheme, setDarkTheme] = useState(false)
-
-  const handleTheme = () => {
-    setDarkTheme(true)
-  }
+    const [isDarkTheme, setDarkTheme] = useState(true)
 
   return(
-    <ContextObj.Provider  value={{isDarkTheme,handleTheme }}>
+    <ContextObj.Provider  value={{isDarkTheme, setDarkTheme }}>
         {children}
     </ContextObj.Provider>
   ) 
