@@ -1,14 +1,16 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
+import { usePortfolio } from "../../Context.";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-contnet: center;
-  position: rlative;
+  justify-content: center;
+  position: relative;
   z-index: 1;
   align-items: center;
+  margin-top: 30px;
 `;
 
 const Wrapper = styled.div`
@@ -50,8 +52,11 @@ const ContactForm = styled.div`
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  background-color: rgba(17, 25, 40, 0.83);
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  background-color: ${({ isDarkTheme }) =>
+    isDarkTheme ? "rgba(17, 25, 40, 0.83)" : "#fff"};
+  border: 1px solid
+    ${({ isDarkTheme }) =>
+      isDarkTheme ? "rgba(255, 255, 255, 0.125)" : "#000"};
   padding: 32px;
   border-radius: 12px;
   box-shadow: rgba(23, 92, 230, 0.1) 0px 4px 24px;
@@ -99,16 +104,17 @@ const ContactButton = styled.input`
   margin-top: 2px;
   border-radius: 12px;
   border: none;
-  color: ${({ theme }) => theme.text_primary};
+  color: #fff;
   font-size: 18px;
   font-weight: 600;
 `;
 
 const Contact = () => {
+  const { isDarkTheme } = usePortfolio();
   const form = useRef();
   const handelSubmit = (e) => {
     e.preventDefault();
-    //#TODO replace emailjs variables, with my own var's  
+    //#TODO replace emailjs variables, with my own var's
     emailjs
       .sendForm(
         "service_tox7kqs",
@@ -126,6 +132,7 @@ const Contact = () => {
         }
       );
   };
+
   return (
     <Container id="Education">
       <Wrapper>
@@ -137,12 +144,29 @@ const Contact = () => {
         >
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
-        <ContactForm onSubmit={handelSubmit}>
+        <ContactForm onSubmit={handelSubmit} isDarkTheme={isDarkTheme}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" name="message" rows={4} />
+          <ContactInput
+            isDarkTheme={isDarkTheme}
+            placeholder="Your Email"
+            name="from_email"
+          />
+          <ContactInput
+            isDarkTheme={isDarkTheme}
+            placeholder="Your Name"
+            name="from_name"
+          />
+          <ContactInput
+            isDarkTheme={isDarkTheme}
+            placeholder="Subject"
+            name="subject"
+          />
+          <ContactInputMessage
+            isDarkTheme={isDarkTheme}
+            placeholder="Message"
+            name="message"
+            rows={4}
+          />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
       </Wrapper>

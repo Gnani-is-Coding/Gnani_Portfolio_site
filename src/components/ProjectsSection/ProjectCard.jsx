@@ -99,7 +99,10 @@ const ProjectCard = ({ project }) => {
   return (
     <Card>
       <Image src={project.image} />
-      <Tags></Tags>
+      {/**#TODO display this tags  for each project*/}
+      {/* {project.tags.map((tag) => (
+        <Tags>{tag}</Tags>
+      ))} */}
       <Details>
         <Title>{project.title}</Title>
         <Date>{project.date}</Date>

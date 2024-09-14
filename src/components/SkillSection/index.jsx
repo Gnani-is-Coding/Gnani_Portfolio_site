@@ -97,7 +97,9 @@ const SkillList = styled.ul`
 const SkillItem = styled.div`
   font-size: 14px;
   font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 80};
+  color: ${({ isDarkTheme, theme }) => {
+    return isDarkTheme ? theme.text_primary + 95 : "#48494a";
+  }};
   border: 1px solid ${({ theme }) => theme.text_primary + 99};
   border-radius: 12px;
   padding: 12px 16px;
@@ -140,7 +142,10 @@ function SkillSection() {
                 <SkillTitle isDarkTheme>{skill.title}</SkillTitle>
                 <SkillList>
                   {skill.skills.map((item, index_x) => (
-                    <SkillItem key={`skill-x-${index_x}`}>
+                    <SkillItem
+                      key={`skill-x-${index_x}`}
+                      isDarkTheme={isDarkTheme}
+                    >
                       <SkillImage src={item.image} />
                       {item.name}
                     </SkillItem>
