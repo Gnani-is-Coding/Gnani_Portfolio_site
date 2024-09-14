@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Card = styled.div`
+const Card = styled.a`
   width: 330px;
   height: 490px;
   background-color: ${({ theme }) => theme.card};
@@ -14,6 +14,7 @@ const Card = styled.div`
   flex-direction: column;
   gap: 14px;
   transition: all 0.5s ease-in-out;
+  text-decoration: none;
   &:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
@@ -97,7 +98,7 @@ const Button = styled.a`
 
 const ProjectCard = ({ project }) => {
   return (
-    <Card>
+    <Card href={project.webapp} target="_blank">
       <Image src={project.image} />
       {/**#TODO display this tags  for each project*/}
       {/* {project.tags.map((tag) => (
