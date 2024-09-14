@@ -127,7 +127,7 @@ function SkillSection() {
   const { isDarkTheme } = usePortfolio();
 
   return (
-    <Container id="skills">
+    <Container id="Skills">
       <Wrapper>
         <Title>Skills</Title>
         <Desc>

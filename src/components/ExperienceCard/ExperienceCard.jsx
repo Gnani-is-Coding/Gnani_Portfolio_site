@@ -112,7 +112,7 @@ function ExperienceCard({ experience }) {
         flexDirection: "column",
         gap: "12px",
         background: "#1d1836",
-        color: "#fff",
+        color: isDarkTheme ? "#fff" : "#000",
         boxShadow: "rgba(23,92,230,0.15) 0px 4px 24px",
         backgroundColor: isDarkTheme ? "rgba(17, 25, 40, 0.83)" : "#fff",
         border: "1px solid rgba(255, 255, 255, 0.125)",

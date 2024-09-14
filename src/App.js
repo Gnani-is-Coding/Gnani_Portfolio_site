@@ -53,7 +53,7 @@ function App() {
             </Wrapper>
             <Projects />
             <Wrapper>
-              {/* <Education /> */}
+              <Education />
               <Contact />
             </Wrapper>
             <Footer />
