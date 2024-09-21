@@ -92,6 +92,7 @@ const CardContainer = styled.div`
 
 const Projects = () => {
   const [toggle, setToggle] = useState("all");
+
   return (
     <Container id="Projects">
       <Wrapper>
@@ -112,33 +113,42 @@ const Projects = () => {
           >
             ALL
           </ToggleButton>
+
           <Divider />
           <ToggleButton
-            active={toggle === "web app"}
-            onClick={() => setToggle("web app")}
+            active={toggle === "static websites"}
+            onClick={() => setToggle("static websites")}
           >
-            WEB APP"S
+            Static Websites
           </ToggleButton>
           <Divider />
           <ToggleButton
-            active={toggle === "android app"}
-            onClick={() => setToggle("android app")}
+            active={toggle === "dynamic websites"}
+            onClick={() => setToggle("dynamic websites")}
           >
-            ANDROID APP'S
+            Dynamic Websites
+          </ToggleButton>
+
+          <Divider />
+          <ToggleButton
+            active={toggle === "react apps"}
+            onClick={() => setToggle("react apps")}
+          >
+            React Projects
           </ToggleButton>
           <Divider />
           <ToggleButton
-            active={toggle === "machine learning"}
-            onClick={() => setToggle("machine learning")}
+            active={toggle === "full-stack web apps"}
+            onClick={() => setToggle("full-stack web apps")}
           >
-            MACHINE LEARNING
+            Full-Stack Web Apps
           </ToggleButton>
         </ToggleButtonGroup>
 
         <CardContainer>
           {toggle === "all" &&
             projects.map((project) => <ProjectCard project={project} />)}
-            
+
           {projects
             .filter((item) => item.category === toggle)
             .map((project) => (

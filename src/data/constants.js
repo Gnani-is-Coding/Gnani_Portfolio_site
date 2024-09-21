@@ -588,7 +588,7 @@ export const Bio = {
         "Nxt Watch modelled after YouTube, is a video streaming platform that enables users to log in,explore video categories and search for specific content while adjusting the interface theme(light, dark).",
       image:"/NxtWatch.png",
       tags: ["HTML", "CSS", "Javascript", "React"],
-      category: "web app",
+      category: "react apps",
       github: "https://github.com/Gnani-is-Coding/youtube-clone-nxtWatch",
       webapp: "https://nxtwatchbygg.ccbp.tech/",
     },
