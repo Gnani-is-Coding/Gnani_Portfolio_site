@@ -92,11 +92,11 @@ export const Bio = {
         //   name: "Graph Ql",
         //   image: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
         // },
-        // {
-        //   name: "Python",
-        //   image:
-        //     "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
-        // },
+        {
+          name: "Python",
+          image:
+            "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+        },
         // {
         //   name: "Flask",
         //   image:
@@ -112,10 +112,10 @@ export const Bio = {
           image:
             "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
         },
-        // {
-        //   name: "Postgresql",
-        //   image: "https://www.postgresql.org/media/img/about/press/elephant.png",
-        // },
+        {
+          name: "Postgresql",
+          image: "https://www.postgresql.org/media/img/about/press/elephant.png",
+        },
         {
           name: "MongoDB",
           image:
@@ -237,7 +237,25 @@ export const Bio = {
         "JavaScript",
         "Firebase",
       ],
-      doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Screenshot%20from%202024-01-25%2022-38-31.png?alt=media&token=2785903f-1a4e-41f5-afd2-6adcfe56d058",
+      doc: "https://drive.google.com/file/d/1PwvUGDJC16IP_kzxOutmvc4EY33LNTmj/view?usp=sharing",
+    },
+    {
+      id:1,
+      img: '/CLOUD-OU-LOGO.webp',
+      role: 'Full Stack Enginner',
+      company: "CloudOU",
+      date: "Sep 2024 - current",
+      desc: "Developing Backend in PostGreSQL in Supabase.Activetly particating in decision making about techonologies to use for each servise,Developing RestAPIs in Python FastAPI.",
+      skills: [
+        "NextJs",
+        "Tailwind CSS",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "POstGreSQL",
+        "Azure DevOps",
+      ],
+      doc: "",
     },
     // {
     //   id: 1,
